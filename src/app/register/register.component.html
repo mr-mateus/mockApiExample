@@ -1,0 +1,31 @@
+<div class="row ">
+  <div class="col-md-12">
+    <div class="row">
+      <div class="col-md-4 offset-4" id="register-form-container">
+        <div class="text-center">
+          <h1>API MOCK TEST</h1>
+          <h4>Crie sua conta agora ;)</h4>
+        </div>
+        <form>
+          <div class="form-group">
+            <label for="userName">Usuário</label>
+            <input type="text" name="userName" id="userName" class="form-control" />
+          </div>
+          <div class="form-group">
+            <label for="userPassword">Senha</label>
+            <input type="password" name="userPassword" id="userPassword" class="form-control" />
+          </div>
+          <div class="form-group">
+            <label for="confirmUserPassword">Confirmar Senha</label>
+            <input type="password" name="confirmUserPassword" id="confirmUserPassword" class="form-control" />
+          </div>
+          <button type="button" class="btn btn-primary" id="btn-create-account" (click)="createAccount()">Criar conta</button>
+          <a id="login-link" [routerLink]="['/login']">Voltar ao login</a>
+        </form>
+        <alert  *ngIf="serverMessage !== '' " type="danger" id="serverError" style="margin: 20px;">
+          <strong>Eita!</strong> {{serverMessage}}!
+        </alert>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,38 @@
+.sidenav {
+    height: 100%;
+    width: 228px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    /* padding-top: 60px; */
+}
+
+.sidenav-title {
+    color: white;
+}
+
+div#menu-actions ul li {
+    background-color: #313131;
+    padding: 10px;
+    border: #111 1px solid;
+}
+
+div#menu-actions ul {
+    color: white;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+div#menu-actions ul li:hover {
+    background-color: #5d5d5d;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+div#home-content {
+  padding-top: 20px;
+}

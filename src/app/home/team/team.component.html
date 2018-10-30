@@ -1,0 +1,18 @@
+<div class="row" id="team-content">
+  <div class="col-md-12">
+    <div class="row">
+      <app-card *ngFor="let user of team?.users" [cardHeader]="user.name">
+        <h5 class="card-title">Cargo: {{user.job}}</h5>
+        <div id="salary" [hidden]="user.salary == undefined || user.salary == null">
+          Salário:
+          <span (click)="toggle(user)">
+            <b *ngIf="!user.salaryIsVisible">[+]</b>
+            <b *ngIf="user.salaryIsVisible">[-]</b>
+          </span>
+          <span [hidden]="!user.salaryIsVisible">{{user.salary}}</span>
+        </div>
+      </app-card>
+
+    </div>
+  </div>
+</div>

@@ -1,0 +1,10 @@
+<button class="btn btn-primary" id="btn-add-employee" (click)="createEmployee()">Adicionar novo funcionário</button>
+<ul class="list-group">
+  <li class="list-group-item" *ngFor="let employee of employees">
+    <div style="float:left">{{employee.name}}</div>
+    <div style="float: right">
+      <button class="btn btn-success" (click)="updateEmployee(employee.id)">Editar </button>
+      <button class="btn btn-danger" (click)="deleteEmployee(employee.id)">Excluir</button>
+    </div>
+  </li>
+</ul>

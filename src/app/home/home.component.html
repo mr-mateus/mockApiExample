@@ -1,0 +1,12 @@
+<div class="row">
+  <div id="mySidenav" class="sidenav ">
+    <h2 class="sidenav-title text-center">API MOCK TEST</h2>
+    <div id="menu-actions">
+      <ul>
+        <li *ngFor="let menu of menuItems" [routerLink]="[menu.address]">{{menu.label}}</li>
+      </ul>
+    </div>
+  </div>
+  <div id="home-content" class="col-md-10 offset-2">
+    <router-outlet></router-outlet>
+  </div>

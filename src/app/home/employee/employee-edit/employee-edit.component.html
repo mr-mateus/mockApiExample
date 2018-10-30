@@ -1,0 +1,39 @@
+<div class="modal-header">
+  <h4 class="modal-title pull-left">{{title}}</h4>
+  <button type="button" class="close pull-right" aria-label="Close" (click)="bsModalRef.hide()">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<div class="modal-body">
+  <form name="clientInfoForm" novalidate>
+    <div class="row">
+      <div class="col-sm-8">
+        <div class="form-group">
+          <label for="inputName">Nome: </label>
+          <input type="text" class="form-control" id="inputName" name="inputName" [(ngModel)]="employee.name" placeholder="Nome do funcionário">
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-8">
+        <div class="form-group">
+          <label for="inputJob">Cargo: </label>
+          <input type="text" class="form-control" id="inputJob" name="inputJob" [(ngModel)]="employee.job" placeholder="Cargo do funcionário">
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-8">
+        <div class="form-group">
+          <label for="inputSalary">Salário: </label>
+          <input type="number" class="form-control" id="inputSalary" name="inputSalary" [(ngModel)]="employee.salary" placeholder="Salário">
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group ">
+      <button type="submit" class="btn btn-primary" id="btn-save-employee" (click)="saveEmployee()">Salvar</button>
+      <button type="submit" class="btn btn-default" (click)="cancel()">Cancelar</button>
+    </div>
+  </form>
+</div>
